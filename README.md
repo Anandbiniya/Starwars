@@ -6,4 +6,10 @@ This is the assignments of star wars
 
 
 <h3>Project Demo</h3>
-<a href="https://spectacular-tiramisu-e1e1b5.netlify.app/">Starwars</a>
+<p>Demolink:</p><a href="https://spectacular-tiramisu-e1e1b5.netlify.app/">Starwars</a>
+
+
+<h3>Tech Stack</h3>
+<li>React</li>
+<li>Chakra UI</li>
+<li>CSS</li>
