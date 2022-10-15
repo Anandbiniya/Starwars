@@ -13,3 +13,19 @@ This is the assignments of star wars
 <li>React</li>
 <li>Chakra UI</li>
 <li>CSS</li>
+
+
+<h3>Features</h3>
+<li>Add Favourite</li>
+<li>View details Page</li>
+<li>Pagination</li>
+
+
+<h3>Install my-project with yarn</h3>
+
+ <li>yarn create-vite </li>
+ <li>npm i react-router-dom@6</li>
+  <li>npm i axios</li>
+  <li>npm i @chakra-ui/react @emotion/react@^11</li>
+  
+  
