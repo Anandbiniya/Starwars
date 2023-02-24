@@ -4,11 +4,11 @@ import { Box, Heading } from "@chakra-ui/react";
 import { Route, Routes } from "react-router";
 import { PeopleDetails } from "./Components/PeopleDetails";
 function App() {
-  
+  console.log("first");
   return (
     <Box className="app">
       <div className="back">
-        <img 
+        <img
           src="https://starwars-codex-next.vercel.app/assets/svg/star-logo.svg"
           alt=""
         />
