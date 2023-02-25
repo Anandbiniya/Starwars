@@ -1,10 +1,11 @@
 import React from "react";
-import "../App.css";
+import "./Pagination.module.css";
+
 export const Pagination = ({ curPage, lastPage, pageBtn }) => {
   const buttons = [];
   for (let i = 1; i <= lastPage; i++) {
     buttons.push(
-      <li key={i} className={"page-item" + (curPage === i ? "-active" : "")}>
+      <li key={i} className={"page-item" + (curPage === i ? " active" : "")}>
         <button className="page-link" onClick={() => pageBtn(i)}>
           {i}
         </button>
@@ -14,13 +15,7 @@ export const Pagination = ({ curPage, lastPage, pageBtn }) => {
 
   return (
     <div>
-      <ul
-        className="pagination"
-        style={{ justifyContent: "center", marginTop: "8px" }}
-      >
-        {" "}
-        {buttons}{" "}
-      </ul>
+      <ul className="pagination"> {buttons} </ul>
     </div>
   );
 };

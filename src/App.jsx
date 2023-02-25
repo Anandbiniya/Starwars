@@ -8,7 +8,7 @@ function App() {
   return (
     <Box className="app">
       <div className="back">
-        <img 
+        <img
           src="https://starwars-codex-next.vercel.app/assets/svg/star-logo.svg"
           alt=""
         />

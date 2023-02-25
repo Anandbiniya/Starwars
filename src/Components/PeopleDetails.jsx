@@ -9,16 +9,19 @@ import {
   Text,
   UnorderedList,
 } from "@chakra-ui/react";
+import styles from "./PeopleDetail.module.css";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import Axios from "axios";
+
 export const PeopleDetails = () => {
   const [data, setData] = useState([]);
   const params = useParams();
+
   useEffect(() => {
     getData(1);
   }, []);
-  console.log(params);
+
   const getData = () => {
     Axios({
       method: "GET",
@@ -30,49 +33,57 @@ export const PeopleDetails = () => {
       })
       .catch((err) => console.log(err));
   };
-  console.log(params);
+
   return (
     <Center>
-      <Flex>
-        <Image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThGqMUWEBulhM1y0ZXXrkokwwaxqciSTyqow&usqp=CAU" />
+      <Flex className={styles.container}>
+        <Image
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThGqMUWEBulhM1y0ZXXrkokwwaxqciSTyqow&usqp=CAU"
+          className={styles.image}
+        />
         <Box
           p="40px"
           color="white"
-          bg="teal.500"
+          bg="gray.900"
           rounded="md"
           shadow="md"
-          display={"flex"}
+          className={styles.details}
         >
-          <UnorderedList key={data.name} spacing={3} textAlign="left">
-            <ListItem>
-              <span style={{ margin: "0 10px" }}>Name:</span> {data.name}
+          <UnorderedList
+            key={data.name}
+            spacing={3}
+            textAlign="left"
+            className={styles.list}
+          >
+            <ListItem className={styles.listItem}>
+              <span className={styles.label}>Name:</span> {data.name}
             </ListItem>
-            <ListItem>
-              <span style={{ margin: "0 10px" }}>Height:</span>
+            <ListItem className={styles.listItem}>
+              <span className={styles.label}>Height:</span>
               {data.height}
             </ListItem>
-            <ListItem>
-              <span style={{ margin: "0 10px" }}>Mass:</span>
+            <ListItem className={styles.listItem}>
+              <span className={styles.label}>Mass:</span>
               {data.mass}
             </ListItem>
-            <ListItem>
-              <span style={{ margin: "0 10px" }}>Hair Color:</span>
+            <ListItem className={styles.listItem}>
+              <span className={styles.label}>Hair Color:</span>
               {data.hair_color}
             </ListItem>
-            <ListItem>
-              <span style={{ margin: "0 10px" }}>Skin Color:</span>
+            <ListItem className={styles.listItem}>
+              <span className={styles.label}>Skin Color:</span>
               {data.skin_color}
             </ListItem>
-            <ListItem>
-              <span style={{ margin: "0 10px" }}>Eye Color:</span>
+            <ListItem className={styles.listItem}>
+              <span className={styles.label}>Eye Color:</span>
               {data.eye_color}
             </ListItem>
-            <ListItem>
-              <span style={{ margin: "0 10px" }}>Birth Color:</span>
+            <ListItem className={styles.listItem}>
+              <span className={styles.label}>Birth Year:</span>
               {data.birth_year}
             </ListItem>
-            <ListItem>
-              <span style={{ margin: "0 10px" }}>Gender:</span>
+            <ListItem className={styles.listItem}>
+              <span className={styles.label}>Gender:</span>
               {data.gender}
             </ListItem>
           </UnorderedList>
