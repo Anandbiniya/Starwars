@@ -1,0 +1,38 @@
+.pagination {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+  
+  .pagination > li {
+    display: inline;
+    margin-right: 5px;
+  }
+  
+  .pagination > li:last-child {
+    margin-right: 0;
+  }
+  
+  .pagination > li > button {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    background-color: #4fd1c5;
+    border-color: #4fd1c5;
+  }
+  
+  .pagination > li.active > button,
+  .pagination > li > button:hover {
+    background-color: #319795;
+    border-color: #319795;
+  }
+  
+  .pagination > li.disabled > button,
+  .pagination > li.disabled > button:hover {
+    background-color: #cbd5e0;
+    border-color: #cbd5e0;
+    cursor: not-allowed;
+  }
+  

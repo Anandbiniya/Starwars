@@ -35,11 +35,11 @@ img {
   background-color: rgb(106, 103, 103);
 }
 .page-link:hover {
-  background-color: #000;
+  /* background-color: #000; */
 }
 
 .page-item-active {
-  background-color: #000;
+  /* background-color: #000; */
 }
 .peoplelist {
   display: grid;
